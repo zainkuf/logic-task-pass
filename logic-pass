@@ -1,0 +1,53 @@
+# remove string ______________________________________
+def rm_ch():
+    string = 'here is my string <3'
+    char = input('enter the char')
+    string = string.replace(char, "")
+    print(string)
+
+
+# no methods
+def remove_char():
+    string = 'here is my string <3'
+    char = input('enter the char')
+    new_string = ''
+    for c in string:
+        if c == char:
+            continue
+        else:
+            new_string += c
+    print(new_string)
+
+
+# ---------------------------------------------end of remove
+# finding prime numbers
+def prime():
+    rng = int(input("Enter the range : "))
+    for n in range(1, rng + 1):
+        if n > 1:
+            for i in range(2, n):
+                if (n % i) == 0:
+                    break
+            else:
+                print(n)
+
+
+# --------------------------------end of prime
+def repeated():
+    char = input('enter char')
+    count = 0
+    my_str = 'this is my string :#'
+    for c in my_str:
+        if c == char:
+            count += 1
+        else:
+            continue
+    print(f'{char} is repeated {count}times')
+
+
+print(__name__)
+if __name__ == '__main__':
+    remove_char()
+    rm_ch()
+    prime()
+    repeated()
